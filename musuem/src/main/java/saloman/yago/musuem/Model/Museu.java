@@ -23,14 +23,12 @@ public class Museu {
     private String nome;
     private String localizacao;
     private Integer fundado;
-    @Column(name = "quantidade_de_obras")
-    private Long quantidadeDeObras;
+
     @Column(name = "media_de_visitas_mensal")
     private double mediaDeVisitasMensal;
     private String site;
 
     @OneToMany(mappedBy = "museu")
-    @JsonIgnore
     private List<Obra> obras = new ArrayList<>();
 
 }

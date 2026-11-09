@@ -26,10 +26,10 @@ public class Artista {
     private String sexo;
 
     @Column(name = "ano_nascimento")
-    private LocalDate anoNascimento;
+    private Integer anoNascimento;
 
     @Column(name = "ano_falecimento")
-    private LocalDate anoFalec;
+    private Integer anoFalecimento;
 
     @OneToMany(mappedBy = "artista")
     @JsonIgnore

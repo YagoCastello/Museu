@@ -18,11 +18,11 @@ public class Obra {
     private Long id;
     private String titulo;
     private String tamanho;
-    private int ano;
+    private Integer ano;
     @Enumerated(EnumType.STRING)
     private TipoObra tipo;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "artista_id")
     private Artista artista;
 
