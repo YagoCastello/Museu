@@ -1,4 +1,11 @@
 package saloman.yago.musuem.Request;
 
-public record ArtistaRequest(String nome, String sexo, String pseudonimo,int anoNasc,int) {
+import jakarta.validation.constraints.NotBlank;
+
+public record ArtistaRequest(
+        @NotBlank(message = "O nome e obrigatorio") String nome,
+        String pseudonimo,
+        String sexo,
+        Integer anoNascimento,
+        Integer anoFalecimento) {
 }
